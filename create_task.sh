@@ -17,19 +17,10 @@ create_task_structure() {
     mkdir -p tasks/$task_id/tests
 
     # Create base files in src
-    touch tasks/$task_id/src/base.cpp
     touch tasks/$task_id/src/ideal.cpp
-    touch tasks/$task_id/src/incorrect.cpp
     touch tasks/$task_id/src/A.cpp
     touch tasks/$task_id/src/B.cpp
     touch tasks/$task_id/src/C.cpp
-    touch tasks/$task_id/src/D.cpp
-    touch tasks/$task_id/src/E.cpp
-    touch tasks/$task_id/src/F.cpp
-    touch tasks/$task_id/src/G.cpp
-    touch tasks/$task_id/src/H.cpp
-    touch tasks/$task_id/src/I.cpp
-    touch tasks/$task_id/src/J.cpp
 
     # Create test file
     touch tasks/$task_id/tests/test_model.cpp
