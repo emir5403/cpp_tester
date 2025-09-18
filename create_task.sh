@@ -31,8 +31,14 @@ cmake_minimum_required(VERSION 3.14)
 project(subset_sum_tests)
 
 # Set C++ standard
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# This adds a C++20-specific compiler flag if the compiler supports it,
+# which can be useful for certain features or stricter checks.
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20")
+endif()
 
 # Include GoogleTest via FetchContent
 include(FetchContent)
